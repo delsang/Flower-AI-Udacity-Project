@@ -15,7 +15,7 @@ def model_to_train(arch, lr, hidden_layers):
             param.requires_grad = False
 
         # Define a new, untrained feed-forward network as a classifier, using ReLU activations and dropout
-        input_size = 25088
+        input_size = model.classifier[0].in_features
         output_size = 102
 
 
@@ -35,7 +35,7 @@ def model_to_train(arch, lr, hidden_layers):
             param.requires_grad = False
 
         # Define a new, untrained feed-forward network as a classifier, using ReLU activations and dropout
-        input_size = 2208
+        input_size = model.classifier[0].in_features
         output_size = 102
 
 
