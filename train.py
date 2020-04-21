@@ -25,7 +25,7 @@ from validationpass import validation
 from model_train import model_train
 from parser import parser
 
-arch, lr, hidden_layers, epochs, device, top_k, category_names, gpu = parser()
+arch, lr, hidden_layers, epochs, device, top_k, category_names, gpu, flower_path = parser()
 
 def main(arch=arch, lr=lr, epochs=epochs, device=device, hidden_layers=hidden_layers):
 

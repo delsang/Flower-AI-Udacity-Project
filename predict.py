@@ -1,14 +1,14 @@
 import sys
 
-
 from load_checkpoint import load_checkpoint
 from process_images import process_image
 from prediction import prediction
 from parser import parser
 
+arch, lr, hidden_layers, epochs, device, top_k, category_names, gpu, flower_path = parser()
 
 filepath = 'checkpoint.pth'
-image_path = sys.argv[1]
+image_path = flower_path
 
 
 # Load model

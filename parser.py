@@ -10,6 +10,7 @@ def parser():
     parser.add_argument('--top_k', action='store', help='choose the top K results', type=int, default=5)
     parser.add_argument('--category_names', action='store', help='choose the file that maps classes to names', default = 'cat_to_name.json')
     parser.add_argument('--gpu', action='store', help='use gpu for inference', default = 'gpu')
+    parser.add_argument('--flower_path', action='store', help='path to the image to predict')
 
     args = parser.parse_args()
 
@@ -21,6 +22,7 @@ def parser():
     top_k = args.top_k
     category_names = args.category_names
     gpu = args.gpu
+    image=args.flower_path
 
 
-    return(arch, lr, hidden_layers, epochs, device, top_k, category_names, gpu)
+    return(arch, lr, hidden_layers, epochs, device, top_k, category_names, gpu, flower_path)
